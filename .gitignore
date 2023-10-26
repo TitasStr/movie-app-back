@@ -1,0 +1,12 @@
+# Ignore the "node_modules" directory
+node_modules/
+
+# Ignore compiled files
+*.class
+*.jar
+
+# Ignore log files
+*.log
+
+# Ignore the "dist" directory
+dist/
