@@ -1,4 +1,4 @@
-     TypeScript React movie-app-back Readme
+# TypeScript React movie-app-back Readme
 
 This is a full-stack application where the frontend is built with React using TypeScript, and the backend is built with Node.js using TypeScript.
 Postgres is used as the database. In order to run the application, please follow the steps below.
