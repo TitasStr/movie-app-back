@@ -16,7 +16,7 @@ Before getting started, make sure you have the following installed on your syste
 
 2. Create the necessary tables by executing the SQL commands written in the database.sql file. You can use the `psql` command-line tool to do this
 
-##Running the Server
+## Running the Server
 
 1. Open your terminal and navigate to the server folder of the project.
 
