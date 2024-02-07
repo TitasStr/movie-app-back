@@ -1,13 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MovieModule } from './movie/movie.module';
-import { AuthService } from './auth/auth.service';
-import { AuthController } from './auth/auth.controller';
+import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
-import { UserService } from './user/user.service';
+import { MovieModule } from './movie/movie.module';
 
 @Module({
   imports: [
@@ -27,10 +22,10 @@ import { UserService } from './user/user.service';
         logging: true,
       }),
     }),
-    MovieModule,
     AuthModule,
+    MovieModule,
   ],
-  controllers: [AppController, AuthController],
-  providers: [AppService, AuthService, UserService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
