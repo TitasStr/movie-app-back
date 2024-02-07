@@ -10,9 +10,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async validateUser(
-    authDto: AuthPayloadDto,
-  ): Promise<{ accessToken: string }> {
+  async validateUser(authDto: AuthPayloadDto): Promise<string> {
     console.log(authDto);
     const user = await this.userService.findUser(authDto);
     if (!user) return null;
@@ -21,12 +19,10 @@ export class AuthService {
       username: user.username,
     };
     const token = this.jwtService.sign(payload);
-    return { accessToken: token };
+    return token;
   }
 
-  async registerUser(
-    registerUserDto: AuthPayloadDto,
-  ): Promise<{ message: string }> {
+  async registerUser(registerUserDto: AuthPayloadDto): Promise<string> {
     return await this.userService.createUser(registerUserDto);
   }
 }

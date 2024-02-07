@@ -31,6 +31,6 @@ export class AuthController {
   @Get('/status')
   @UseGuards(JwtAuthGuard)
   async status(@Req() req) {
-    return { username: req.user.username };
+    return req.user.username;
   }
 }
