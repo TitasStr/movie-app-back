@@ -28,7 +28,7 @@ export class UserService {
     return user;
   }
 
-  async createUser(registerUserDto: UserDto): Promise<{ message: string }> {
+  async createUser(registerUserDto: UserDto): Promise<string> {
     const { username, password } = registerUserDto;
     const existingUser = await this.usersRepository.findOne({
       where: { username },
@@ -47,6 +47,6 @@ export class UserService {
     });
 
     await this.usersRepository.save(newUser);
-    return { message: 'User registered successfully' };
+    return 'User registered successfully';
   }
 }
